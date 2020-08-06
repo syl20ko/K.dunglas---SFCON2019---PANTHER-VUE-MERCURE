@@ -1,0 +1,17 @@
+{# templates/session/index.html.twig #}
+{% extends 'base.html.twig' %}
+
+{% block title %}SymfonyCon{% endblock %}
+
+{% block body %}
+    {% include 'session/title.html.twig' with {title: 'Schedule'} %}
+    <section class="section">
+        <main class="container">
+            {% for session in sessions %}
+                <article class="session-item is-bordered" id="session-{{ session.id }}">
+                    {% include 'session/session.html.twig' with {session: session} %}
+                </article>
+            {% endfor %}
+        </main>
+    </section>
+{% endblock %}

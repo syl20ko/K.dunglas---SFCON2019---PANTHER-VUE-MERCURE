@@ -1,0 +1,57 @@
+#var content = '';
+#document.querySelectorAll('.box_rows_2 div.speaker').forEach((elem, i) => {
+#	content += 'session_'+i+":\n";
+#    content += '  title: '+elem.querySelector('.name').innerText+"\n";
+#    content += '  author: '+elem.querySelector('p.speaker a').innerText+"\n";
+#    content += '  summary: '+elem.querySelector('p:nth-child(4)').innerText+"\n";
+#    var date = elem.querySelector('p.speaker small').innerText.split('-')[3].trim().replace(', ', ' ').replace(/\//gi, '-');
+#    content += `  datetime: '<(new DateTime("`+date+`"))>'`+"\n";
+#});
+#console.log(content);
+
+App\Entity\Session:
+  session_0:
+    title: Keynote
+    author: Fabien Potencier
+    summary: Keynote
+    datetime: '<(new DateTime("27-04-2019 09:15"))>'
+  session_1:
+    title: Comment faire le bon choix entre GraphQL et REST ? Pourquoi pas gRPC ?
+    author: Barhoumi Ramzi
+    summary: 'La présentation comportera les sujets suivants:'
+    datetime: '<(new DateTime("27-04-2019 10:00"))>'
+  session_2:
+    title: Le TDD dans la vraie vie avec Panther
+    author: Adrien Lucas
+    summary: Panther est un tout nouveau composant Symfony dont l'objectif est de vous simplifier l'écriture des tests d'intégrations et des tests end-to-end !
+    datetime: '<(new DateTime("27-04-2019 11:10"))>'
+  session_3:
+    title: ERP Gestion de transport
+    author: ameni kooli
+    summary: Présentation d'un projet de réalisation d'un ERP pour le compte du client Log-Xpress, spécialiste dans la logistique et transport aérien et maritime sur la base du framework Symfony.
+    datetime: '<(new DateTime("27-04-2019 11:55"))>'
+  session_4:
+    title: 'CAS REEL: Réalisation d''un POC et son Industrialisation avec Symfony'
+    author: Selim Masrouki
+    summary: "Mise en place d'une stratégie BIM (Building Information Modeling), ou bien, le traitement de la maquette numérique. Ce processus concerne l’acquisition, la collecte et le traitement de données sous forme de maquette numérique décrivant l’environnement existant d’un projet, sa conception et son exécution."
+    datetime: '<(new DateTime("27-04-2019 14:00"))>'
+  session_5:
+    title: Symfony HttpClient, quoi d'autre?
+    author: Nicolas Grekas
+    summary: Avez-vous entendu parler de Symfony HttpClient ? Ce nouveau composant sera publié fin mai avec Symfony 4.3. Que diriez-vous de l'expérimenter en lançant "composer require symfony/http-client" ? C'est ce que je vous propose de faire lors de cette conférence. Nous passerons en revue ses fonctionnalités et ses caractéristiques essentielles. Suffisant pour remplacer Guzzle et consorts ? À n'en pas douter en ce qui me concerne :)
+    datetime: '<(new DateTime("27-04-2019 14:45"))>'
+  session_6:
+    title: Exploiter le composant ExpressionLanguage pour générer des exports à la volée
+    author: Mehdi Chibouni
+    summary: Exporter des données est une tâche qui est souvent recurrente. Dans ce talk, nous allons exploiter le composant Symfony ExpressionLanguage pour créer dynamiquement des requêtes Doctrine. Nous allons également profiter de cette occasion pour montrer comment on peut facilement créer un système de plugins avec Symfony
+    datetime: '<(new DateTime("27-04-2019 15:55"))>'
+  session_7:
+    title: Plongée dans l'injection de dépendances de Symfony
+    author: Titouan Galopin
+    summary: L'injection de dépendances est probablement l'élément le plus important dans l'architecture d'une application Symfony. En fournissant un moyen souple et efficace de construire des architectures suivant les principes SOLID, ce modèle de conception constitue un environnement idéal pour vos projets.
+    datetime: '<(new DateTime("27-04-2019 16:40"))>'
+  session_8:
+    title: Des apps Symfony sous stéroïdes !
+    author: Kévin Dunglas
+    summary: Grâce aux nouvelles capacités de la plateforme web (web components, progressive web apps...) et à la montée en puissance des bibliothèques et frameworks JS tels que Vue, React et Angular, quasiment toutes les nouvelles apps Symfony doivent aussi tirer partie de l'écosystème frontend. Symfony 4 contient de nombreux outils rendant très facile d'intégrer les outils JS moderne dans le framework.
+    datetime: '<(new DateTime("27-04-2019 17:05"))>'
